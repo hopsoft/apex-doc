@@ -28,10 +28,20 @@ All `Items` in APEX persist their values to session state.
 
 This means a textbox named `MY_TEXTBOX` will persist its value into a session key of `MY_TEXTBOX` whenever the page submits or links to another page. *This is why all item names must be unique.*
 
-### Referencing values stored in the Session
+### How to use session values
 
 * **SQL** `:MY_TEXTBOX` or `:"MY_TEXTBOX"`
 * **PL/SQL** `V('MY_TEXTBOX')` or `NV('MY_TEXTBOX')` for numeric values.
 * **Static text** `&MY_TEXTBOX.`
 
 [More info on session state...](http://docs.oracle.com/cd/E23903_01/doc/doc.41/e21674/concept_ses_val.htm)
+
+## Page Structure
+
+Pages are split into 3 logical sections.
+
+* **Page Rendering** - Represents the lifecyle of constructing the page.
+* **Page Processing** - Represents what happens when the page is submitted... (the page submission lifecycle).
+* **Shared Components** - Represents reusable items that are shared between pages.
+
+![APEX page structure](https://img.skitch.com/20120426-g6634a7wt85nmsfjix79e3cdam.png)
