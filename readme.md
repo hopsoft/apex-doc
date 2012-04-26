@@ -36,7 +36,7 @@ This means a textbox named `MY_TEXTBOX` will persist its value into a session ke
 
 [More...](http://docs.oracle.com/cd/E23903_01/doc/doc.41/e21674/concept_ses_val.htm)
 
-## Page Structure
+## Pages
 
 Pages are split into 3 logical sections.
 
