@@ -6,9 +6,9 @@ Allows developers and other techies to ramp up quickly.
 
 ## Understanding APEX's URL Structure
 
-'''
+```
 f?p=App:Page:Session:Request:Debug:ClearCache:itemNames:itemValues:PrinterFriendly
-'''
+```
 
 * `App` Indicates an application ID or alphanumeric alias.
 * `Page` Indicates a page number or alphanumeric alias.
