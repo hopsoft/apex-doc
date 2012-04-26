@@ -14,7 +14,7 @@ The primary difference is the target audience.
 APEX is targeted at business oriented folks with a high technical aptitude... not necessarily developers.
 Because of this, the official docs are a mix of technical detail and user manual style descriptions.
 
-This readme is targeted at developers and serves as a quick reference to the technical detail so you can jump in fast.
+This readme serves as a quick reference to the technical detail so you can jump in fast.
 
 [Read the official docs here...](http://docs.oracle.com/cd/E23903_01/doc/doc.41/e21674.pdf)
 
