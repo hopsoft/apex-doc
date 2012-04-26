@@ -20,7 +20,7 @@ f?p=App:Page:Session:Request:Debug:ClearCache:itemNames:itemValues:PrinterFriend
 * `itemValues` Comma-delimited list of item values to assign to `itemNames`.
 * `PrinterFriendly` Indicates whether or not to render the page in printer friendly mode.
 
-[More info on URL structure...](http://docs.oracle.com/cd/E23903_01/doc/doc.41/e21674/concept_url.htm#BEIFCDGF)
+[More...](http://docs.oracle.com/cd/E23903_01/doc/doc.41/e21674/concept_url.htm#BEIFCDGF)
 
 ## Session State
 
@@ -34,7 +34,7 @@ This means a textbox named `MY_TEXTBOX` will persist its value into a session ke
 * **PL/SQL** `V('MY_TEXTBOX')` or `NV('MY_TEXTBOX')` for numeric values.
 * **Static text** `&MY_TEXTBOX.`
 
-[More info on session state...](http://docs.oracle.com/cd/E23903_01/doc/doc.41/e21674/concept_ses_val.htm)
+[More...](http://docs.oracle.com/cd/E23903_01/doc/doc.41/e21674/concept_ses_val.htm)
 
 ## Page Structure
 
@@ -58,7 +58,7 @@ The rendering lifecycle is comprised of the following events.
 1. Before Footer
 1. After Footer
 
-You can inject logic, queries, & content at each stage of the rendering lifecycle.
+[More...](http://docs.oracle.com/cd/E23903_01/doc/doc.41/e21674/bldr_pg_def_about.htm#HTMDB04014)
 
 ### Page Processing
 
@@ -69,20 +69,23 @@ The processing lifecycle is comprised of the following events.
 1. Processing
 1. After Processing
 
-You can inject logic at each stage of the processing lifecycle.
+[More...](http://docs.oracle.com/cd/E23903_01/doc/doc.41/e21674/bldr_pg_def_about.htm#HTMDB04015)
 
 ### Page Controls
 
 These are the tools APEX gives you to manipulate the above lifecycles.
+Controls can be injected at each stage of the lifecycle.
 
 * **Branches** - A logic control used to fork the user experience based on user activity.
-* <font color="4B78B8">**Buttons** - A physical control used to submit the page or link to other pages.</font>
+* **Buttons** - A physical control used to submit the page or link to other pages.
 * **Computations** - A logic control for assigning values to session state.
 * **Dynamic Actions** - A logic control for controlling client side behavior.
-* <font color="4B78B8">**Items** - A physical control that represents an HTML form element.</font>
+* **Items** - A physical control that represents an HTML form element.
 * **Processes** - A logic control that supports PL/SQL & DML (Data Manipulation Language).
-* <font color="4B78B8">**Regions** - A physical control that serves as a container for HTML content.</font>
+* **Regions** - A physical control that serves as a container for HTML content.
 * **Validations** - A logic control for verifying user input.
+
+
 
 
 
