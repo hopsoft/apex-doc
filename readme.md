@@ -1,8 +1,22 @@
 # Oracle Application Express (APEX) Quick Reference
 
-A collection of the meaty technical info from [APEX's official documentation](http://docs.oracle.com/cd/E23903_01/doc/doc.41/e21674.pdf).
+A collection of the meaty technical info from [APEX's official documentation](http://docs.oracle.com/cd/E23903_01/doc/doc.41/e21674.pdf) which allows developers and other techies to ramp up quickly.
 
-Allows developers and other techies to ramp up quickly.
+## Intro
+
+APEX is a full stack development platform for building web applications on top of the Oracle database.
+Similar to offerings such as SAP Portal and Microsoft Sharepoint.
+It fits a unique & narrow niche aimed at lowering the barrier to entry for application building.
+
+Before you tuck tail and run, be aware that APEX also competes with the likes of other full stack offerings such as Rails, Django, & Node.
+
+The primary difference is the target audience.
+APEX is targeted at business oriented folks with a high technical aptitude... not necessarily developers.
+Because of this, the official docs are a mix of technical detail and user manual style descriptions.
+
+This readme is targeted at developers and serves as a quick reference to the technical detail so you can jump in fast.
+
+[Read the official docs here...](http://docs.oracle.com/cd/E23903_01/doc/doc.41/e21674.pdf)
 
 ## Understanding APEX's URL Structure
 
