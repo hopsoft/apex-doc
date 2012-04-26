@@ -45,3 +45,44 @@ Pages are split into 3 logical sections.
 * **Shared Components** - Represents reusable items that are shared between pages.
 
 ![APEX page structure](https://img.skitch.com/20120426-g6634a7wt85nmsfjix79e3cdam.png)
+
+### Page Rendering
+
+The rendering lifecycle is comprised of the following events.
+
+1. Before Header
+1. After Header
+1. Before Regions
+1. Regions
+1. After Regions
+1. Before Footer
+1. After Footer
+
+You can inject logic, queries, & content at each stage of the rendering lifecycle.
+
+### Page Processing
+
+The processing lifecycle is comprised of the following events.
+
+1. After Submit
+1. Validating
+1. Processing
+1. After Processing
+
+You can inject logic at each stage of the processing lifecycle.
+
+### Page Controls
+
+These are the tools APEX gives you to manipulate the above lifecycles.
+
+* **Branches** - A logic control used to fork the user experience based on user activity.
+* <font color="4B78B8">**Buttons** - A physical control used to submit the page or link to other pages.</font>
+* **Computations** - A logic control for assigning values to session state.
+* **Dynamic Actions** - A logic control for controlling client side behavior.
+* <font color="4B78B8">**Items** - A physical control that represents an HTML form element.</font>
+* **Processes** - A logic control that supports PL/SQL & DML (Data Manipulation Language).
+* <font color="4B78B8">**Regions** - A physical control that serves as a container for HTML content.</font>
+* **Validations** - A logic control for verifying user input.
+
+
+
