@@ -99,6 +99,19 @@ Controls can be injected at each stage of the lifecycle.
 * **Regions** - A physical control that serves as a container for HTML content.
 * **Validations** - A logic control for verifying user input.
 
+### Shared Components
+
+These are common elements that can be shared between pages.
+
+* **Breadcrumbs** - A hierarchical list of links that is rendered using a template.
+* **Lists** - A collection of links that is rendered using a template.
+* **Lists of Values** - A static or dynamic list of key/value pairs.
+* **Navigation Bar** - A navigation control to navigate between pages.
+* **Security** - An authorization scheme that controls access to the application.
+* **Tabs** - A navigation control to navigate between pages.
+* **Templates** - An HTML snippet used for rendering data.
+* **Theme** - A named collection of templates.
+
 
 
 
