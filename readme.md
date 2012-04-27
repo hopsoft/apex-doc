@@ -27,7 +27,7 @@ f?p=App:Page:Session:Request:Debug:ClearCache:itemNames:itemValues:PrinterFriend
 * `App` Indicates an application ID or alphanumeric alias.
 * `Page` Indicates a page number or alphanumeric alias.
 * `Session` Identifies a session ID.
-* `Request` Sets the value of REQUEST.
+* `Request` Sets the value of REQUEST. This can be used to run an PL/SQL [Application Process](http://docs.oracle.com/cd/E23903_01/doc/doc.41/e21674/bldr_app_proc.htm#HTMDB25210).
 * `Debug` [YES|NO] Indicates whether or not to debug the page.
 * `ClearCache` [[ITEM_NAME],RP,APP,SESSION] Clears the cache. This sets the value of items to null.
 * `itemNames` Comma-delimited list of item names to set session state for.
@@ -112,6 +112,11 @@ These are common elements that can be shared between pages.
 * **Templates** - An HTML snippet used for rendering data.
 * **Theme** - A named collection of templates.
 
+[More...](http://docs.oracle.com/cd/E23903_01/doc/doc.41/e21674/bldr_sc.htm#HTMDB04009)
+
+```
+NOTE: Pages can be viewed in either Tree view or Component view.
+```
 
 
 
