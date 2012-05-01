@@ -251,9 +251,27 @@ Here is the list of everything provided by APEX_UTIL.
 
 [More...](http://docs.oracle.com/cd/B28359_01/appdev.111/b32258/api.htm#CHDBDCIE)
 
+### Datatypes
+
+Some datatypes such as APEX_APPLICATION_GLOBAL.VC_ARR2 are defined by APEX packages.
+You can dig around and find the definitions within the APEX schema.
+
+![APEX_APPLICATION_GLOBAL.VC_ARR2 definition](https://img.skitch.com/20120501-fa5uij4ena2954927gjns752p5.png)
+
+If you have a question about where a type is defined you can simply run a query similar to this.
+
+```
+select * from all_source where text like '%type vc_arr2%'
+```
+
 ## Misc
 
 * Writing tests for PL/SQL with Ruby. [https://github.com/rsim/ruby-plsql](https://github.com/rsim/ruby-plsql)
+* Introspect Oracle metadata
 
-
-
+  * `select * from [all,user,dba]_objects`
+  * `select * from [all,user,dba]_coll_types`
+  * `select * from [all,user,dba]_types`
+  * `select * from [all,user,dba]_dependencies`
+  * `select * from [all,user,dba]_source`
+  * `select * from [all,user,dba]_varrays`
