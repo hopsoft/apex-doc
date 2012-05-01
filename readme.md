@@ -1,6 +1,13 @@
 # Oracle Application Express (APEX) Quick Reference
 
-A collection of the meaty technical info from [APEX's official documentation](http://docs.oracle.com/cd/E23903_01/doc/doc.41/e21674.pdf) which allows developers and other techies to ramp up quickly.
+A collection of the meaty technical info from [APEX's official documentation](http://docs.oracle.com/cd/E23903_01/doc/doc.41/e21674.pdf) which allows developers and other tech minded folks to ramp up quickly.
+
+APEX is targeted at business oriented folks with high technical aptitude... not necessarily developers.
+Because of this, the official docs are a mix of technical detail and user manual style descriptions.
+
+This readme aspires to be a sane technical APEX reference and should save you from beating your head against the desk.
+
+[Read the official docs here...](http://docs.oracle.com/cd/E23903_01/doc/doc.41/e21674.pdf)
 
 ## Intro
 
@@ -8,15 +15,14 @@ APEX is a full stack development platform for building web applications on top o
 Similar to offerings such as SAP Portal and Microsoft Sharepoint.
 It fits a unique & narrow niche aimed at lowering the barrier to entry for application building.
 
+#### A note to developers
+
 Before you tuck tail and run, be aware that APEX also competes with the likes of other full stack offerings such as Rails, Django, & Node.
 
 The primary difference is the target audience.
-APEX is targeted at business oriented folks with a high technical aptitude... not necessarily developers.
-Because of this, the official docs are a mix of technical detail and user manual style descriptions.
+APEX is targeted at business oriented folks with a high technical aptitude... not developers.
 
-This readme serves as a quick reference to the technical detail so you can jump in fast.
-
-[Read the official docs here...](http://docs.oracle.com/cd/E23903_01/doc/doc.41/e21674.pdf)
+Even though it might feel like developing with your hands tied, I would encourage you to stick with it. APEX is quite powerful and even enjoyable **(...gasp)** once you become more familiar with it.
 
 ## Understanding APEX's URL Structure
 
@@ -114,10 +120,122 @@ These are common elements that can be shared between pages.
 
 [More...](http://docs.oracle.com/cd/E23903_01/doc/doc.41/e21674/bldr_sc.htm#HTMDB04009)
 
+## APEX_UTIL
+
+APEX_UTIL is a library of functions and procedures that are callable from PL/SQL.
+
+Consider an example which uses values from a multi-select list.
+
 ```
-NOTE: Pages can be viewed in either Tree view or Component view.
+DECLARE
+  --  declare a variable to hold the selected values
+  my_list APEX_APPLICATION_GLOBAL.VC_ARR2;
+BEGIN
+  -- assign the values to the variable by invoking an APEX_UTIL method
+  my_list := APEX_UTIL.STRING_TO_TABLE(:MY_VALUES);
+
+  DELETE FROM my_table WHERE parent_id = :MY_PARENT;
+
+  -- iterate over the list
+  FOR i IN 1..my_list.count
+  LOOP
+    INSERT INTO my_table (parent_id, child_id)
+        VALUES (:MY_PARENT, my_list(i));
+  END LOOP;
+END;
 ```
 
+Here is the list of everything provided by APEX_UTIL.
+
+* `CACHE_GET_DATE_OF_PAGE_CACHE` Function
+* `CACHE_GET_DATE_OF_REGION_CACHE` Function
+* `CACHE_PURGE_BY_APPLICATION` Procedure
+* `CACHE_PURGE_BY_PAGE` Procedure
+* `CACHE_PURGE_STALE` Procedure
+* `CHANGE_CURRENT_USER_PW` Procedure
+* `CHANGE_PASSWORD_ON_FIRST_USE` Function
+* `CLEAR_APP_CACHE` Procedure
+* `CLEAR_PAGE_CACHE` Procedure
+* `CLEAR_USER_CACHE` Procedure
+* `COUNT_CLICK` Procedure
+* `CREATE_USER` Procedure
+* `CREATE_USER_GROUP` Procedure
+* `CURRENT_USER_IN_GROUP` Function
+* `DOWNLOAD_PRINT_DOCUMENT` Procedure
+* `EDIT_USER` Procedure
+* `END_USER_ACCOUNT_DAYS_LEFT` Function
+* `EXPIRE_END_USER_ACCOUNT` Procedure
+* `EXPIRE_WORKSPACE_ACCOUNT` Procedure
+* `EXPORT_USERS` Procedure
+* `FETCH_APP_ITEM` Function
+* `FETCH_USER` Procedure
+* `FIND_SECURITY_GROUP_ID` Function
+* `FIND_WORKSPACE` Function
+* `GET_ACCOUNT_LOCKED_STATUS` Function
+* `GET_ATTRIBUTE` Function
+* `GET_AUTHENTICATION_RESULT` Function
+* `GET_BLOB_FILE_SRC` Function
+* `GET_CURRENT_USER_ID` Function
+* `GET_DEFAULT_SCHEMA` Function
+* `GET_EMAIL` Function
+* `GET_FILE` Procedure
+* `GET_FILE_ID` Function
+* `GET_FIRST_NAME` Function
+* `GET_GROUPS_USER_BELONGS_TO` Function
+* `GET_GROUP_ID` Function
+* `GET_GROUP_NAME` Function
+* `GET_LAST_NAME` Function
+* `GET_NUMERIC_SESSION_STATE` Function
+* `GET_PREFERENCE` Function
+* `GET_PRINT_DOCUMENT` Function
+* `GET_SESSION_STATE` Function
+* `GET_USER_ID` Function
+* `GET_USER_ROLES` Function
+* `GET_USERNAME` Function
+* `IS_LOGIN_PASSWORD_VALID` Function
+* `IS_USERNAME_UNIQUE` Function
+* `KEYVAL_NUM` Function
+* `KEYVAL_VC2` Function
+* `LOCK_ACCOUNT` Procedure
+* `PASSWORD_FIRST_USE_OCCURRED` Function
+* `PREPARE_URL` Function
+* `PUBLIC_CHECK_AUTHORIZATION` Function
+* `PURGE_REGIONS_BY_APP` Procedure
+* `PURGE_REGIONS_BY_NAME` Procedure
+* `PURGE_REGIONS_BY_PAGE` Procedure
+* `REMOVE_PREFERENCE` Procedure
+* `REMOVE_SORT_PREFERENCES` Procedure
+* `REMOVE_USER` Procedure
+* `RESET_AUTHORIZATIONS` Procedure
+* `RESET_PW` Procedure
+* `SAVEKEY_NUM` Function
+* `SAVEKEY_VC2` Function
+* `SET_ATTRIBUTE` Procedure
+* `SET_AUTHENTICATION_RESULT` Procedure
+* `SET_CUSTOM_AUTH_STATUS` Procedure
+* `SET_EMAIL` Procedure
+* `SET_FIRST_NAME` Procedure
+* `SET_LAST_NAME` Procedure
+* `SET_PREFERENCE` Procedure
+* `SET_SESSION_LIFETIME_SECONDS` Procedure
+* `SET_SESSION_MAX_IDLE_SECONDS` Procedure
+* `SET_SESSION_STATE` Procedure
+* `SET_USERNAME` Procedure
+* `STRONG_PASSWORD_CHECK` Procedure
+* `STRONG_PASSWORD_VALIDATION` Function
+* `STRING_TO_TABLE` Function
+* `TABLE_TO_STRING` Function
+* `UNEXPIRE_END_USER_ACCOUNT` Procedure
+* `UNEXPIRE_WORKSPACE_ACCOUNT` Procedure
+* `UNLOCK_ACCOUNT` Procedure
+* `URL_ENCODE` Function
+* `WORKSPACE_ACCOUNT_DAYS_LEFT` Function
+
+[More...](http://docs.oracle.com/cd/E11882_01/appdev.112/e12510/apex_util.htm)
+
+## Misc
+
+* Writing tests for PL/SQL with Ruby. [https://github.com/rsim/ruby-plsql](https://github.com/rsim/ruby-plsql)
 
 
 
