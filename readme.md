@@ -18,11 +18,11 @@ It fits a unique & narrow niche aimed at lowering the barrier to entry for appli
 #### A note to developers
 
 Before you tuck tail and run, be aware that APEX also competes with the likes of other full stack offerings such as Rails, Django, & Node.
-
 The primary difference is the target audience.
 APEX is targeted at business oriented folks with a high technical aptitude... not developers.
 
-Even though it might feel like developing with your hands tied, I would encourage you to stick with it. APEX is quite powerful and even enjoyable **(...gasp)** once you become more familiar with it.
+Even though it might feel like developing with your hands tied, I would encourage you to stick with it.
+APEX is quite powerful and even enjoyable *(...gasp)* once you become more familiar with it.
 
 ## Understanding APEX's URL Structure
 
