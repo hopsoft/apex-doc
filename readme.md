@@ -120,11 +120,29 @@ These are common elements that can be shared between pages.
 
 [More...](http://docs.oracle.com/cd/E23903_01/doc/doc.41/e21674/bldr_sc.htm#HTMDB04009)
 
-## APEX_UTIL
+## APIs
+
+APEX provides several functions and procedures out of the box. This functionality can be leveraged with PL/SQL from within your APEX app.
+
+The available APIs are.
+
+* APEX_UTIL
+* APEX_MAIL
+* APEX_ITEM
+* APEX_APPLICATION
+* APEX_CUSTOM_AUTH
+* APEX_LDAP
+
+[More...](http://docs.oracle.com/cd/B28359_01/appdev.111/b32258/api.htm)
+
+### APEX_UTIL
 
 APEX_UTIL is a library of functions and procedures that are callable from PL/SQL.
 
-Consider an example which uses values from a multi-select list.
+Consider this example which uses values from a multi-select list. The example uses the following session variables.
+
+* **:MY_PARENT** - A single number that represents a parent record's primary key.
+* **:MY_VALUES** - A colon delimited list of numbers that represent the primary keys of child records. *(Set via a multi-select list)*
 
 ```
 DECLARE
@@ -231,7 +249,7 @@ Here is the list of everything provided by APEX_UTIL.
 * `URL_ENCODE` Function
 * `WORKSPACE_ACCOUNT_DAYS_LEFT` Function
 
-[More...](http://docs.oracle.com/cd/E11882_01/appdev.112/e12510/apex_util.htm)
+[More...](http://docs.oracle.com/cd/B28359_01/appdev.111/b32258/api.htm#CHDBDCIE)
 
 ## Misc
 
